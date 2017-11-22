@@ -1,0 +1,19 @@
+body{
+	padding: 0;
+	margin:0;
+}
+
+.mux-header{
+      background-color: #FFF000;
+      height: 64px;
+}
+
+.mux-main{
+        background-color: #ff000000;
+        height: 300px;
+}
+
+.mux-footer{
+         background-color: #000fff;
+         height: 80px;
+}
