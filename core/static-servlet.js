@@ -2,7 +2,7 @@ var path = require('path');
 var type = require('./type.js');
 var fs = require('fs');
 
-function staticServlet(staticPath, pathName, request, response) {
+module.exports = function staticServlet(staticPath, pathName, request, response) {
 	var filePath = path.join(path.dirname(__dirname), staticPath, pathName);
 	fs.stat(filePath, function(err, stats) {
 		if (!err && stats.isFile()) {
@@ -29,5 +29,3 @@ function staticServlet(staticPath, pathName, request, response) {
 		}
 	});
 };
-
-module.exports = staticServlet;

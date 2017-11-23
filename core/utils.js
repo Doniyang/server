@@ -13,9 +13,8 @@ module.exports = {
 	},
 	parseJSON: function(param) {
 		var obj = {},
-			ary;
-		ary = param.split('&');
-		for (var i = 0; ii = ary.length; i++) {
+			ary = param.split('&');
+		for (var i = 0, ii = ary.length; i < ii; i++) {
 			obj[ary[i].split('=')[0]] = ary[i].split('=')[1]
 		}
 		return obj;

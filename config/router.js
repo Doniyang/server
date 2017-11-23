@@ -4,6 +4,6 @@ module.exports = [{
 		res.writeHead(200, {
 			"content-type": "text/html"
 		});
-		res.end("<h1>" + JSON.stringify(req.query) + "</h1>");
+		res.end("<h1>" + JSON.stringify(req.body) + "</h1>");
 	}
 }]
