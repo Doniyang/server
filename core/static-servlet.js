@@ -6,7 +6,7 @@ module.exports = function staticServlet(staticPath, pathName, request, response)
 	var filePath = path.join(path.dirname(__dirname), staticPath, pathName);
 	fs.stat(filePath, function(err, stats) {
 		if (!err && stats.isFile()) {
-			fs.readFile(filePath, 'utf8', function(error, data) {
+			fs.readFile(filePath, function(error, data) {
 				if (error) {
 					response.writeHead(404, {
 						"content-type": "text/html"
